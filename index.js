@@ -1,6 +1,5 @@
 const PG = require('pg');
 const MongoDB = require('mongodb');
-const _ = require('lodash');
 const CONFIG = require('./config.json');
 
 const LIMIT = 1000;
@@ -30,7 +29,7 @@ const getAllTables = async () => {
     WHERE schemaname != 'pg_catalog' AND 
     schemaname != 'information_schema'`);
 
-    const tables = _.map(res.rows, 'tablename');
+    const tables = res.rows((row) => row.tablename);
     return tables;
 };
 
