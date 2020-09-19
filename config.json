@@ -1,0 +1,9 @@
+{
+    "PG_USER": "playground",
+    "PG_HOST": "localhost",
+    "PG_PASSWORD": "playground",
+    "PG_DATABASE": "playground",
+    "PG_PORT": 5432,
+    "MONGO_URL": "mongodb://localhost:27017",
+    "MONGO_DATABASE": "old_pg"
+}
